@@ -14,11 +14,12 @@ jobs:
 
         steps:
             - uses: actions/checkout@v4
+            - uses: pnpm/action-setup@v4
 
             - name: Prepare environment
               uses: actions/setup-node@v4
-
-            - run: npm install --global pnpm
+              with:
+                cache: 'pnpm'
 
             - name: Install deps
               run: pnpm m i
