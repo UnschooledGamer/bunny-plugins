@@ -44,7 +44,7 @@ const plugins = [
 
 for (let plug of await readdir("./plugins")) {
     const manifest = JSON.parse(await readFile(`./plugins/${plug}/manifest.json`))
-    const outPath = `./dist/${plug}/index.js`
+    const outPath = `./dist/${plug.toLowerCase()}/index.js`
 
     try {
         const bundle = await rollup({
@@ -72,7 +72,7 @@ for (let plug of await readdir("./plugins")) {
         const toHash = await readFile(outPath)
         manifest.hash = createHash("sha256").update(toHash).digest("hex")
         manifest.main = "index.js"
-        await writeFile(`./dist/${plug}/manifest.json`, JSON.stringify(manifest))
+        await writeFile(`./dist/${plug.toLowerCase()}/manifest.json`, JSON.stringify(manifest))
 
         console.log(`Successfully built ${manifest.name}!`)
 
