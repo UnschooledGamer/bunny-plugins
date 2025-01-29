@@ -1,5 +1,5 @@
-import DeepL from "./DeepL"
+import gtranslate from "./gtranslate"
 
 export {
-    DeepL
+    gtranslate
 }

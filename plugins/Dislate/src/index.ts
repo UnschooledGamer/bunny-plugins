@@ -6,6 +6,7 @@ import Settings from "./settings"
 export const settings: {
     source_lang?: string
     target_lang?: string
+    api_key?: string
 } = storage
 
 settings.target_lang ??= "EN"

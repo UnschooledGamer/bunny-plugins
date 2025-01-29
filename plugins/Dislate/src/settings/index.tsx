@@ -39,7 +39,6 @@ export default () => {
                     render: TargetLang,
                 })}
             />
-
             <Text style={styles.subheaderText} onPress={() => url.openURL("https://github.com/aeongdesu/vdplugins")}>
                 {`Build: (${manifest.hash.substring(0, 7)})`}
             </Text>
