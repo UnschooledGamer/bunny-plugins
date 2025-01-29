@@ -1,4 +1,4 @@
-# ~Dis~Continued 
+# <del>Dis</del>Continued 
 Is Forked, Original at [aeongdesu/vdplugins - Discontinued](https://github.com/aeongdesu/vdplugins)
 Trying to Continue Plugins(Don't expect too much) but for [Bunny Discord Mod](https://github.com/bunny-mod/Bunny)
 
