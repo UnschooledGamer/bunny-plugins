@@ -28,7 +28,7 @@ let cachedData: object[] = []
 
 export default () => before("openLazy", LazyActionSheet, ([component, key, msg]) => {
     const message = msg?.message
-    if (key !== "MessageLongPressActionSheet" || !message) return
+    if (key !== "MessageLongPressActionSheet" || !message) return showToast("event key is not MessageLongPressActionSheet")
     component.then(instance => {
         const unpatch = after("default", instance, (_, component) => {
             React.useEffect(() => () => { unpatch() }, [])
